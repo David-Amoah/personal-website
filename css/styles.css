@@ -1,0 +1,387 @@
+/* genaral styling */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1200px;
+    max-width: 98%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* end general styling */
+
+
+/* header */
+
+#main .container .logo h1 {
+    text-transform: uppercase;
+}
+
+#main .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#main .menu {
+    display: none;
+}
+
+#main .container nav a {
+    margin: 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: black;
+}
+
+
+/* end header */
+
+
+/* banner */
+
+#banner {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-image: url(https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#banner .overlay {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: #000;
+    opacity: .5;
+}
+
+#banner .container {
+    z-index: 3000;
+    color: white;
+}
+
+#banner .bio h3 {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+#banner .bio h1 {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+
+#banner .bio p {
+    margin: 10px 0px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+#banner .bio button {
+    background: blue;
+    padding: .5rem;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    border-radius: 5px;
+}
+
+#banner .bio button:hover {
+    background-color: rgb(6, 6, 88);
+}
+
+#banner .bio button:active {
+    background-color: rgb(6, 6, 88);
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+}
+
+
+/* end banner */
+
+
+/* portfolio */
+
+#portfolio {
+    margin: 50px;
+}
+
+#portfolio .port h3 {
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+#portfolio .port h5 {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+#portfolio .port {
+    line-height: 1.5;
+}
+
+#portfolio .port .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: blue;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+#portfolio .port .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#portfolio .container .box {
+    width: 350px;
+    height: 400px;
+    background-image: url(../img/David.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#portfolio .container {
+    display: flex;
+    gap: 20px;
+}
+
+#portfolio .container .port {
+    width: 400px;
+}
+
+
+/* end portfolio */
+
+
+/* services */
+
+#services {
+    text-align: center;
+    line-height: 1.3;
+}
+
+#services .container h2 {
+    margin-top: 50px;
+}
+
+#services .container p {
+    margin: 10px;
+}
+
+#services .container .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    width: 900px;
+    max-width: 90%;
+    padding: 1rem;
+}
+
+#services .container .inner .icon {
+    font-size: 50px;
+}
+
+.fa-tv {
+    position: relative;
+}
+
+.fa-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(2px, 7px);
+    font-size: 25px;
+}
+
+
+/* end services */
+
+
+/* works */
+
+#featured-works {
+    text-align: center;
+}
+
+#featured-works .title {
+    margin: 50px 0px 20px 0px;
+    font-size: 1.2rem;
+}
+
+#featured-works .works {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+#featured-works .works .box {
+    width: 450px;
+}
+
+#featured-works .works img {
+    width: 450px;
+    border: 1px solid black;
+}
+
+
+/* end works */
+
+
+/* footer */
+
+#footer {
+    color: white;
+    background: rgb(39, 39, 39);
+    padding: 1.6rem;
+    text-align: center;
+    line-height: 2;
+}
+
+#footer .logo {
+    text-transform: uppercase;
+}
+
+#footer .wrapper .social .border {
+    color: orange;
+    display: inline;
+    border: 1px solid white;
+    padding: .6rem;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+#footer .wrapper .social i {
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+/* end footer */
+
+
+/* media queries */
+
+@media(max-width:940px) {
+    #main nav {
+        display: none;
+    }
+    #main .menu {
+        display: block;
+        font-size: 25px;
+    }
+    #featured-works .works .box {
+        width: 400px;
+    }
+    #featured-works .works img {
+        width: 400px;
+    }
+    #services .container .inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:850px) {
+    #featured-works .works {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        width: 400px;
+        max-width: 90%;
+    }
+}
+
+@media(max-width:750px) {
+    #portfolio .container {
+        display: block;
+    }
+}
+
+@media(max-width:470px) {
+    #featured-works .works img {
+        width: 350px;
+    }
+    #featured-works .works .box {
+        width: 350px;
+    }
+    #main .logo {
+        font-size: .6rem;
+    }
+    #banner .container .bio h1 {
+        font-size: 1.5rem;
+    }
+    #portfolio .container .box {
+        width: 250px;
+    }
+    #portfolio .container .port {
+        width: 300px;
+    }
+    #portfolio .container .port p {
+        font-size: 1rem;
+    }
+}
+
+
+/* end media queries */
