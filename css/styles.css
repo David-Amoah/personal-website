@@ -373,13 +373,38 @@ a {
         font-size: 1.5rem;
     }
     #portfolio .container .box {
-        width: 250px;
+        width: 100%;
+    }
+    #portfolio .container {
+        padding: 0;
     }
     #portfolio .container .port {
         width: 300px;
     }
     #portfolio .container .port p {
         font-size: 1rem;
+    }
+    #banner .bio {
+        text-align: center;
+        line-height: 1.7rem
+    }
+    #banner .bio h3 {
+        font-size: 1.8rem;
+    }
+    #footer .wrapper .logo h1 {
+        font-size: 1.5rem;
+    }
+    #footer .wrapper .social i {
+        font-size: 1.3rem;
+    }
+    #footer .wrapper .copyright {
+        line-height: 1.5;
+    }
+    #featured-works .works .box {
+        width: 300px;
+    }
+    #featured-works .works img {
+        width: 300px;
     }
 }
 
