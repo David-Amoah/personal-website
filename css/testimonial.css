@@ -1,0 +1,135 @@
+                            /*general styles*/
+                            
+                            * {
+                                box-sizing: border-box;
+                            }
+                            
+                            a {
+                                text-decoration: none;
+                            }
+                            
+                            h1,
+                            h2,
+                            h3,
+                            h4,
+                            h5,
+                            p {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            
+                            .container {
+                                width: 1200px;
+                                max-width: 90%;
+                                margin: 0 auto;
+                            }
+                            /* end general styles */
+                            /* header */
+                            
+                            #main {
+                                color: black;
+                            }
+                            
+                            #main .container .logo h1 {
+                                text-transform: uppercase;
+                            }
+                            
+                            #main .container {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 1rem;
+                            }
+                            
+                            #main .menu {
+                                display: none;
+                            }
+                            
+                            #main .container nav a {
+                                margin: 1rem;
+                                font-size: 1.2rem;
+                                text-transform: capitalize;
+                                color: black;
+                            }
+                            /* end header */
+                            /* testimonial */
+                            
+                            #testimonial {
+                                padding-bottom: 2rem;
+                            }
+                            
+                            #testimonial .container {
+                                width: 700px;
+                                max-width: 90%;
+                                margin: 0 auto;
+                            }
+                            
+                            #testimonial .wrapper .inner {
+                                background: fuchsia;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                font-size: 1.4rem;
+                                text-align: center;
+                            }
+                            
+                            #testimonial .title h1 {
+                                text-align: center;
+                                margin: 1rem;
+                                padding: 1rem;
+                                font-size: 2rem;
+                            }
+                            
+                            #testimonial .wrapper {
+                                position: relative;
+                                margin-bottom: 1.8rem;
+                                height: 250px;
+                            }
+                            
+                            #testimonial .face-wrapper {
+                                display: flex;
+                                justify-content: center;
+                            }
+                            
+                            #testimonial .face-wrapper .face {
+                                width: 50px;
+                                height: 50px;
+                                background: violet;
+                                border-radius: 50px;
+                                margin-left: .6rem;
+                                cursor: pointer;
+                                background-size: cover;
+                                background-position: top center;
+                                background-image: url(../img/image-1.jpg);
+                            }
+                            
+                            #testimonial .face-wrapper .face:nth-child(2) {
+                                background-image: url(../img/image-2.jpg);
+                            }
+                            
+                            #testimonial .face-wrapper .face:nth-child(3) {
+                                background-image: url(../img/image-3.jpg);
+                            }
+                            
+                            #testimonial .face-wrapper .face:nth-child(4) {
+                                background-image: url(../img/image-4.jpg);
+                            }
+                            
+                            #testimonial .face-wrapper .face:nth-child(5) {
+                                background-image: url(../img/image-5.jpg);
+                            }
+                            /* end testimonial */
+                            /* media queries */
+                            
+                            @media(max-width:850px) {
+                                #main nav {
+                                    display: none;
+                                }
+                                #main .menu {
+                                    display: block;
+                                    font-size: 25px;
+                                }
+                                /* end media queries */
+                            }
