@@ -9,12 +9,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
-    width: 1200px;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
 h1,
 h2,
 h3,
@@ -29,38 +23,68 @@ a {
     text-decoration: none;
 }
 
+body {
+    background-color: hotpink;
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.sub-title {
+    margin: 10px;
+    text-align: center;
+}
+
+.overlay {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+}
+
 
 /* end general styling */
 
 
 /* header */
 
-#main {
-    color: white;
-    z-index: 3000;
-    max-width: 90%;
+#header {
+    padding: 1rem;
+    margin: 0 auto;
+    z-index: 3000
 }
 
-#main .container .logo h1 {
-    text-transform: uppercase;
-}
-
-#main .container {
+#header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
 }
 
-#main .menu {
-    display: none;
-}
-
-#main .container nav a {
-    margin: 1rem;
-    font-size: 1.2rem;
-    text-transform: capitalize;
+#header .container .logo {
+    text-transform: uppercase;
     color: white;
+}
+
+#header .container nav a {
+    color: white;
+    margin-left: 1rem;
+    text-transform: capitalize;
+}
+
+#header .menu {
+    color: white;
+    display: none;
 }
 
 
@@ -70,67 +94,57 @@ a {
 /* banner */
 
 #banner {
-    min-height: 100vh;
-    max-width: 100%;
+    height: 100vh;
     display: flex;
-    /* align-items: center; */
     position: relative;
     background-size: cover;
     background-image: url(https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-    z-index: 3000;
 }
 
-#banner .overlay {
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+#banner .wrapper .bio {
+    text-align: center;
+    padding: 1rem;
+    width: 550px;
+    max-width: 90%;
+    color: white;
     position: absolute;
-    background: #000;
-    opacity: .5;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.7;
+}
+
+#banner .wrapper .bio h4 {
+    font-size: 1.5rem;
+}
+
+#banner .wrapper .bio h2 {
+    font-size: 2rem;
+}
+
+#banner .wrapper .bio p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#banner .wrapper .bio button {
+    width: 150px;
+    height: 50px;
+    border: 1px solid white;
     color: white;
-}
-
-#banner .bio h3 {
-    text-transform: capitalize;
-    font-size: 1.2rem;
-}
-
-#banner .bio h1 {
-    text-transform: capitalize;
-    font-size: 2.5rem;
-}
-
-#banner .bio p {
-    margin: 10px 0px;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-}
-
-#banner .bio button {
-    background: blue;
-    padding: .5rem;
-    text-transform: capitalize;
+    background: transparent;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 blue;
+    transition: ease-in-out .5s;
+    font-size: 1.4rem;
+    font-weight: 900;
     outline: none;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 9px #999;
-    border-radius: 5px;
 }
 
-#banner .bio button:hover {
-    background-color: rgb(6, 6, 88);
-}
-
-#banner .bio button:active {
-    background-color: rgb(6, 6, 88);
-    box-shadow: 0 3px #666;
-    transform: translateY(4px);
+#banner .wrapper .bio button:hover {
+    box-shadow: inset 150px 0 0 0 blue;
+    border: blue;
 }
 
 
@@ -140,7 +154,8 @@ a {
 /* portfolio */
 
 #portfolio {
-    margin: 50px;
+    padding: 20px;
+    background-color: violet;
 }
 
 #portfolio .port h3 {
@@ -199,20 +214,18 @@ a {
 }
 
 #portfolio .container .box {
-    width: 350px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     background-image: url(../img/David.jpg);
     background-size: cover;
     background-position: center;
+    max-width: 90%;
 }
 
 #portfolio .container {
-    display: flex;
-    gap: 20px;
-}
-
-#portfolio .container .port {
-    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
 }
 
 
@@ -221,13 +234,12 @@ a {
 
 /* services */
 
-#services .container {
-    text-align: center;
+#services {
+    max-width: 100%;
 }
 
 #services .container .post {
     border: 1px solid black;
-    width: 400px;
     padding: 1rem;
 }
 
@@ -251,7 +263,7 @@ a {
     left: 0;
     bottom: 0;
     right: 0;
-    transform: translate(2px, 5px);
+    transform: translate(10.5px, 5px);
     font-size: 15px;
 }
 
@@ -261,39 +273,144 @@ a {
 
 /* works */
 
-#featured-works .container {
-    text-align: center;
-    align-items: center;
-}
-
-#featured-works .works {
-    width: 900px;
-    margin: 0 auto
-}
-
-#featured-works .title {
-    margin: 50px 0px 20px 0px;
-    font-size: 1.2rem;
-}
-
-#featured-works .works {
+#featured-works .container .works {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-#featured-works .works .box {
-    width: 450px;
-}
-
-#featured-works .works img {
-    width: 450px;
+#featured-works .container .works .box {
+    background: cyan;
+    min-width: 200px;
+    min-height: 200px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
     border: 1px solid black;
+}
+
+#featured-works .container .works .box:nth-child(1) {
+    background-image: url(../img/bbc.png);
+}
+
+#featured-works .container .works .box:nth-child(2) {
+    background-image: url(../img/jerseys.png);
+}
+
+#featured-works .container .works .box:nth-child(3) {
+    background-image: url(../img/makeup.png);
+}
+
+#featured-works .container .works .box:nth-child(4) {
+    background-image: url(../img/movies.png);
+}
+
+#featured-works .container .works .box .overlay a {
+    color: white;
+    margin: .5rem;
+}
+
+#featured-works .container .works .box .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+#featured-works .container .works .box .overlay:hover {
+    opacity: 1;
 }
 
 
 /* end works */
+
+
+/* testimonials */
+
+#testimonials {
+    margin-bottom: 100px;
+    padding: 2rem;
+}
+
+#testimonials .container {
+    width: 600px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#testimonials .container .wrapper {
+    position: relative;
+    margin-bottom: 1.8rem;
+    height: 200px;
+}
+
+#testimonials .container .wrapper .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all ease-in-out 300ms;
+    transform: translateX(200px);
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+}
+
+#testimonials .face-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#testimonials .face-wrapper .face {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: .8rem;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+    background-size: cover;
+    background-position: top;
+}
+
+#testimonials .face-wrapper .face.active {
+    transform: scale(1.6);
+}
+
+#testimonials .container .wrapper .inner.active {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+#testimonials .face-wrapper .face:nth-child(1) {
+    background-image: url(../img/image-1.jpg);
+}
+
+#testimonials .face-wrapper .face:nth-child(2) {
+    background-image: url(../img/image-2.jpg);
+}
+
+#testimonials .face-wrapper .face:nth-child(3) {
+    background-image: url(../img/image-3.jpg);
+}
+
+#testimonials .face-wrapper .face:nth-child(4) {
+    background-image: url(../img/image-4.jpg);
+}
+
+#testimonials .face-wrapper .face:nth-child(5) {
+    background-image: url(../img/image-5.jpg);
+}
+
+
+/* end tedtimonials */
 
 
 /* footer */
@@ -310,15 +427,6 @@ a {
     text-transform: uppercase;
 }
 
-#footer .wrapper .social .border {
-    color: orange;
-    display: inline;
-    border: 1px solid white;
-    padding: .6rem;
-    margin: 0 auto;
-    border-radius: 100px;
-}
-
 #footer .wrapper .social i {
     font-size: 1rem;
     margin-right: 20px;
@@ -332,36 +440,20 @@ a {
 /* media queries */
 
 @media(max-width:940px) {
-    #main nav {
+    #header nav {
         display: none;
     }
-    #main .menu {
+    #header .menu {
         display: block;
         font-size: 25px;
-    }
-    #featured-works .works .box {
-        width: 400px;
-    }
-    #featured-works .works img {
-        width: 400px;
     }
     #services .container .inner {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-@media(max-width:900px) {
-    #featured-works .works img {
-        width: 350px;
-    }
-}
-
-@media(max-width:850px) {
-    #featured-works .works {
-        grid-template-columns: 1fr;
-        margin: 0 auto;
-        width: 400px;
-        max-width: 90%;
+    #featured-works .container .works {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
     }
 }
 
@@ -371,53 +463,17 @@ a {
     }
 }
 
-@media(max-width:470px) {
-    #featured-works .works img {
-        width: 350px;
+@media(max-width:550px) {
+    #services .container .inner {
+        grid-template-columns: 1fr;
     }
-    #featured-works .works .box {
-        width: 350px;
+    #featured-works .container .works {
+        grid-template-columns: repeat(1, 1fr);
     }
-    #main .logo {
-        font-size: .6rem;
+    #testimonials {
+        background-color: red;
     }
-    #banner .container .bio h1 {
-        font-size: 1.5rem;
-    }
-    #portfolio .container .box {
-        width: 100%;
-    }
-    #portfolio .container {
-        padding: 0;
-    }
-    #portfolio .container .port {
-        width: 300px;
-    }
-    #portfolio .container .port p {
-        font-size: 1rem;
-    }
-    #banner .bio {
-        text-align: center;
-        line-height: 1.7rem
-    }
-    #banner .bio h3 {
-        font-size: 1.8rem;
-    }
-    #footer .wrapper .logo h1 {
-        font-size: 1.5rem;
-    }
-    #footer .wrapper .social i {
-        font-size: 1.3rem;
-    }
-    #footer .wrapper .copyright {
-        line-height: 1.5;
-    }
-    #featured-works .works .box {
-        width: 300px;
-    }
-    #featured-works .works img {
-        width: 300px;
-    }
+    #portfolio {}
 }
 
 
