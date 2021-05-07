@@ -1,2 +1,3 @@
 # personal website
-# [Live Demo](https://da-personal-website.herokuapp.com/)
+
+# [Live Demo](https://da-personal.herokuapp.com/)
